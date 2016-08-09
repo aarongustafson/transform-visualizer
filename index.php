@@ -87,7 +87,6 @@ $show = $Mustache->render(
 );
 
 # compress & output
-echo $show;
-//echo $HtmlCompress->compress($show);
+echo $HtmlCompress->compress($show);
 
 ?>
