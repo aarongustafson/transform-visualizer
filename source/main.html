@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Visualizing CSS Transforms</title>
+		<style>
+			{{css}}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Visualizing CSS Transforms</h1>
+			<p>Drop in a CSS3 transform stack and see how it gets created. Then rearrange and try again. This is especially useful when working with <code>translate</code> and <code>rotate</code> functions or when you are working in 3D.</p>
+		</header>
+		<main>
+			<form action="" method="post">
+				<p>
+					<input type="hidden" name="previously" value="{{previously}}">
+					<label for="to_visualize">What transformation would you like to step through?</label>
+					<textarea name="to_visualize" id="to_visualize">{{#current}}{{transform}}{{/current}}{{^current}}translateX(50px) rotate(45deg) translateY(80px){{/current}}</textarea>
+					<button type="submit">Visualize This!</button>
+				</p>
+			</form>
+			{{#current}}
+				<figure>
+			{{/current}}
+			{{#previous}}
+					<div class="visualization visualization--previous" style="transform: {{transform}}"><code>{{transform}}</code></div>
+			{{/previous}}
+			{{#current}}
+					<div class="visualization" id="current"><code>{{transform}}</code></div>
+					<figcaption>Visual rendering of each transform you’ve created.</figcaption>
+				</figure>
+			{{/current}}
+		</main>
+		<footer>
+		</footer>
+		<script>
+			{{js}}
+		</script>
+		<template id="figure">
+			<figure>
+				<div class="visualization" id="current"><code></code></div>
+				<figcaption>Visual rendering of each transform you’ve created.</figcaption>
+			</figure>
+		</template>
+	</body>
+</html>

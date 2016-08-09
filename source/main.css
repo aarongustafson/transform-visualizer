@@ -1,0 +1,94 @@
+body {
+	font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+	margin: 1em;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-smoothing: subpixel-antialiased;
+	perspective: 500px;
+}
+header {
+	background: #000;
+	color: #fff;
+	margin: -1em -1em 0;
+	padding: 1em;
+}
+h1 {
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	margin: 0;
+}
+figure {
+	box-shadow: inset 0 0 50px #ccc;
+	border: 1px solid;
+	display: block;
+	position: relative;
+	min-height: 70vh;
+	margin-left: 0;
+	margin-right: 0; 
+}
+figcaption {
+	background: #000;
+	color: #fff;
+	padding: .5em;
+	position: absolute;
+	top: 100%;
+	left: -1px;
+	right: -1px;
+}
+label {
+	font-weight: bold;
+}
+input {
+	display: none;
+}
+textarea {
+	box-sizing: border-box;
+	display: block;
+	margin: .5em 0;
+	padding: .5em;
+	width: 400px;
+	height: 200px;
+}
+button {
+	margin-right: .5em;
+}
+.visualization {
+	background: #ccc;
+	border: 5px solid;
+	border-radius: 10px;
+	box-sizing: border-box;
+	color: #000;
+	width: 190px;
+	height: 190px;
+	margin: -100px 0 0 -100px;
+	padding: 20px;
+	opacity: .5;
+	position: absolute;
+	z-index: 1;
+	top: 50%;
+	left:  50%;
+	transition: transform .5s, opacity 1s;
+}
+.visualization--previous {
+	opacity: .35;
+}
+template {
+	display: none;
+}
+
+@media only screen and (min-width: 50em) {
+
+	main {
+		display: flex;
+		flex-direction: row;
+	}
+	form {
+		flex: 1 1 40%;
+	}
+	figure {
+		flex: 1 1 60%;
+	}
+
+}

@@ -1,0 +1,10 @@
+#current {
+	animation-duration: {{animation_duration}}s;
+  	animation-name: visualize;
+  	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	opacity: 1;
+}
+@keyframes visualize {
+	{{keyframes}}
+}
